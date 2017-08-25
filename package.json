@@ -1,0 +1,50 @@
+{
+  "dependencies": {
+    "@purest/providers": "^1.0.0",
+    "@types/express": "^4.0.34",
+    "bluebird": "^3.4.7",
+    "chromedriver": "^2.27.2",
+    "cloudinary": "^1.6.0",
+    "express": "^4.14.0",
+    "jsonfile": "^2.4.0",
+    "log4ts": "^0.4.2",
+    "purest": "^3.0.1",
+    "qrcode-terminal": "^0.11.0",
+    "request": "^2.79.0",
+    "uuid": "^3.0.1",
+    "wechaty": "0.7.79"
+  },
+  "scripts": {
+    "start": "docker run --env CLOUDINARY_SECRET=$CLOUDINARY_SECRET -ti --volume=\"$(pwd)\":/bot --rm zixia/wechaty src/main.ts",
+    "direct": "node src/main.js",
+    "preinstall-chromedriver": "npm install",
+    "install-chromedriver": "node node_modules/chromedriver/install.js",
+    "pretest_e2e": "npm run install-chromedriver",
+    "test_e2e": "node release/test/rune2e.js"
+  },
+  "name": "haoshiyou-bot",
+  "description": "[![Powered by Wechaty](https://img.shields.io/badge/Powered%20By-Wechaty-green.svg)](https://github.com/wechaty/wechaty)",
+  "version": "1.0.1",
+  "main": "main.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xinbenlv/haoshiyou-bot.git"
+  },
+  "keywords": [
+    "haoshiyou",
+    "haoshiyou.org",
+    "chatbot",
+    "wechaty",
+    "wechat",
+    "rent",
+    "house",
+    "roommate"
+  ],
+  "author": "Zainan Victor Zhou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xinbenlv/haoshiyou-bot/issues"
+  },
+  "homepage": "https://github.com/xinbenlv/haoshiyou-bot#readme"
+}
